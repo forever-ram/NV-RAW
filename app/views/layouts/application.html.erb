@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>NVRaw</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= yield :title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
-<%= yield %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= yield :head_css %>
 
-</body>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="<%= yield :body_class %>">
+
+    <%= yield %>
+
+    <!-- starts footer -->
+    <footer id="footer">
+      <div class="container">
+        <%= yield :footer %>
+        <%= render partial: 'shared/footer' %>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <%= javascript_include_tag "application" %>
+    <%= yield :footer_js %>
+  </body>
 </html>
