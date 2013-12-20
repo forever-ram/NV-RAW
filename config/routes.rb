@@ -1,5 +1,6 @@
 NVRaw::Application.routes.draw do
 
+  get '/about-us' => "welcome#about_us", as: :about_us
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

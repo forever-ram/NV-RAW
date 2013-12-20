@@ -12,16 +12,13 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="<%= yield :body_class %>">
+    <!-- starts header -->
+    <%= render partial: 'shared/header' %>
 
     <%= yield %>
 
     <!-- starts footer -->
-    <footer id="footer">
-      <div class="container">
-        <%= yield :footer %>
-        <%= render partial: 'shared/footer' %>
-      </div>
-    </footer>
+    <%= render partial: 'shared/footer' %>
 
     <!-- Scripts -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
