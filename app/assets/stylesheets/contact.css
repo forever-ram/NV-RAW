@@ -29,13 +29,13 @@
 	width: 89%;
 }
 #contact .form .box input.name{
-	background: url('../img/formname.png') #fff no-repeat 5px;
+	background: url('/assets/formname.png') #fff no-repeat 5px;
 }
 #contact .form .box input.mail{
-	background: url('../img/formmail.png') #fff no-repeat 5px;
+	background: url('/assets/formmail.png') #fff no-repeat 5px;
 }
 #contact .form .box input.phone{
-	background: url('../img/formphone.png') #fff no-repeat 5px;
+	background: url('/assets/formphone.png') #fff no-repeat 5px;
 }
 #contact .form .box_r{
 	float: right;
@@ -177,7 +177,7 @@
 	background: #252528;
 }
 .contacticos{
-	background: url('../img/contact_icos.png') no-repeat;
+	background: url('/assets/contact_icos.png') no-repeat;
 	width: 24px;
 	height: 44px;
 }
@@ -190,17 +190,17 @@
 
 }
 @media (min-width: 980px) {
-	
+
 }
 @media (max-width: 979px) {
 
 }
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
 
 }
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) {	
+@media (max-width: 767px) {
 	#contact .contact .submit .box{
 		margin: 10px 0 24px;
 	}
@@ -217,7 +217,7 @@
 	#contact .map .box_wrapp{
 		width: 90%;
 		position: relative;
-		margin: 0 auto 80px;	
+		margin: 0 auto 80px;
 	}
 	#contact .map .box_wrapp .box_cont{
 	}
@@ -231,9 +231,9 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	#contact .contact .submit .right input[type="submit"]{
-		width: 60%;		
+		width: 60%;
 	}
 	#contact .map .box_wrapp{
-		width: 100%;	
+		width: 100%;
 	}
 }

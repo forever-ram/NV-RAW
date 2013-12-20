@@ -30,7 +30,7 @@
             </ul>
           </li>
           <li><%= link_to 'PRICING', pricing_path, class: "#{ params[:controller] == 'welcome' && params[:action] == 'pricing' ? 'active' : '' }" %></li>
-          <li><a href="contact.html">CONTACT US</a></li>
+          <li><%= link_to 'CONTACT US', contact_path, class: "#{ params[:controller] == 'welcome' && params[:action] == 'contact' ? 'active' : '' }" %></li>
           <li><a href="blog.html">BLOG</a></li>
           <li><a class="btn-header" href="sign-up.html">Sign up</a></li>
           <li><a class="btn-header" href="sign-in.html">Sign in</a></li>
