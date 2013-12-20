@@ -7,6 +7,7 @@ NVRaw::Application.routes.draw do
   get '/features' => "welcome#features", as: :features
   get '/services' => "welcome#services", as: :services
   get '/portfolio' => "welcome#portfolio", as: :portfolio
+  get '/portfolio-item' => "welcome#portfolio_item", as: :portfolio_item
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
