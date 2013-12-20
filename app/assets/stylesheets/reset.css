@@ -45,7 +45,8 @@
 	text-align: center;
 	width: 83%;
 }
-.reset_page .box .form input[type="text"]{
+.reset_page .box .form input[type="text"],
+.reset_page .box .form input[type='email'] {
 	border-color: #DBDBDB #EAEAEA #EAEAEA #DBDBDB;
     border-left: 1px solid #DBDBDB;
     border-style: solid;
@@ -70,7 +71,7 @@
 	text-decoration: underline;
 }
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
 	.reset_page .box{
 	  width: 54%;
 	}
@@ -81,13 +82,13 @@
 	}
 }
 @media (min-width: 980px) {
-	.reset_page .box{	  
+	.reset_page .box{
 		width: 40%;
 	}
 }
 @media (max-width: 480px) {
 	.reset_page .box{
-		width: 100%;  
+		width: 100%;
 	}
 }
 

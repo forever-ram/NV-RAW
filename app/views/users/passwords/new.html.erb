@@ -1,0 +1,34 @@
+<%= content_for :title, 'Business Template - Sign up' %>
+
+<%= content_for :head_css do %>
+  <%= stylesheet_link_tag 'reset.css' %>
+<% end %>
+
+<%= content_for :body_class, '' %>
+<%= content_for :header_class, 'navbar navbar-inverse navbar-static-top' %>
+
+<div id="reset_pwd" class="reset_page">
+  <div class="container">
+    <div class="row">
+      <div class="span12 box_wrapper">
+        <div class="span12 box">
+          <div>
+            <div class="head">
+              <h4>Enter your email address below to receive instructions on how to reset your password.</h4>
+              <div class="line"></div>
+            </div>
+            <div class="form">
+              <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+                <%= devise_error_messages! %>
+
+                <%= f.email_field :email, :autofocus => true, placeholder: 'Email address' %>
+                <%= f.submit "Reset password", class: 'btn' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <p class="already">Know your password? <%= link_to "Sign in", new_session_path(resource_name) %></p>
+      </div>
+    </div>
+  </div>
+</div>

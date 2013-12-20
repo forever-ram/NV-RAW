@@ -1,5 +1,7 @@
 NVRaw::Application.routes.draw do
 
+  devise_for :users
+
   get '/about-us' => "welcome#about_us", as: :about_us
   get '/pricing' => "welcome#pricing", as: :pricing
   get '/contact' => "welcome#contact", as: :contact

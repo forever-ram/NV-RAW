@@ -1,6 +1,6 @@
 /* Sign In Option 1 */
 #sign_in1{
-    background: url("../img/backgrounds/aqua.jpg")  no-repeat;
+    background: url("/assets/backgrounds/aqua.jpg")  no-repeat;
     display: block;
     height: 540px;
     margin-bottom: 90px;
@@ -106,6 +106,7 @@
     margin: 0 0 46px 0;
 }
 #sign_in1 .footer input[type="text"],
+#sign_in1 .footer input[type='email'],
 #sign_in1 .footer input[type="password"] {
     border-radius: 3px;
     font-size: 16px;
@@ -245,7 +246,7 @@
     background: #252528;
 }
 #sign_in2 .icos{
-    background: url('../img/signin_icos.png') no-repeat;
+    background: url('/assets/signin_icos.png') no-repeat;
     width: 96px;
     height: 30px;
 }
@@ -329,7 +330,9 @@
 #sign_in2 .signin_box .box .form form{
     margin: 0;
 }
-#sign_in2 .signin_box .box .form input[type="text"]{
+#sign_in2 .signin_box .box .form input[type="text"],
+#sign_in2 .signin_box .box .form input[type='email'],
+#sign_in2 .signin_box .box .form input[type='password'] {
     border-radius: 3px;
     font-size: 16px;
     width: 96%;
@@ -392,14 +395,15 @@
 
 }
 @media (max-width: 979px) {
-    
+
 }
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
     #sign_in1 .header .social{
         width: 35%;
     }
-    #sign_in1 .footer input[type="text"], 
+    #sign_in1 .footer input[type="text"],
+    #sign_in1 .footer input[type='email'],
     #sign_in1 .footer input[type="password"]{
         width: 25%;
     }
@@ -415,9 +419,9 @@
     #sign_in2 .signin_box .box .social a.circle{
         margin-right: 10px;
     }
-}   
+}
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
     #sign_in1{
         background: none;
         height: auto;
@@ -437,7 +441,8 @@
     #sign_in1 .division .line{
         border-color: #333;
     }
-    #sign_in1 .footer input[type="text"], 
+    #sign_in1 .footer input[type="text"],
+    #sign_in1 .footer input[type='email'],
     #sign_in1 .footer input[type="password"]{
         font-size: 13px;
         width: 97%;
