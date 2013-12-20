@@ -9,7 +9,7 @@
 #blog .section_header input[type="text"]{
 	float: right;
 	margin-top: 9px;
-	background: url('../img/search.png') #fff no-repeat 5px;
+	background: url('/assets/search.png') #fff no-repeat 5px;
 	padding-left: 28px;
 	width: 18%;
 	border-radius: 5px;
@@ -85,7 +85,7 @@
 	padding-top: 12px;
 }
 #blog .post_row .post .author_box  h6{
-	margin: 0 0 3px 0;	
+	margin: 0 0 3px 0;
 	font-size: 13px;
 	line-height: 15px;
 	font-style: italic;
@@ -122,7 +122,7 @@
 	-moz-transition: all .1s linear;
 	-ms-transition: all .1s linear;
 	-o-transition: all .1s linear;
-	transition: all .1s linear;	
+	transition: all .1s linear;
 }*/
 #blog .post_row .post:hover a.plus_wrapper{
 	display: block;
@@ -156,10 +156,10 @@
 
 }
 @media (max-width: 979px) {
-	
+
 }
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
 	#blog .pagination{
 		width: 36%;
 	}
@@ -169,7 +169,7 @@
 
 }
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) {	
+@media (max-width: 767px) {
 	#blog .post_row{
 		height: auto;
 		margin-bottom: 0;

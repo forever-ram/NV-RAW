@@ -3,6 +3,7 @@ NVRaw::Application.routes.draw do
   get '/about-us' => "welcome#about_us", as: :about_us
   get '/pricing' => "welcome#pricing", as: :pricing
   get '/contact' => "welcome#contact", as: :contact
+  get '/blog' => "welcome#blog", as: :blog
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
