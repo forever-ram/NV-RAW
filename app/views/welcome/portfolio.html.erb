@@ -1,0 +1,144 @@
+<%= content_for :title, 'Business Template' %>
+
+<%= content_for :head_css do %>
+  <%= stylesheet_link_tag 'portfolio.css' %>
+  <%= stylesheet_link_tag 'lib/isotope.css' %>
+  <%= stylesheet_link_tag 'lib/animate.css' %>
+<% end %>
+
+<%= content_for :body_class, '' %>
+<%= content_for :header_class, 'navbar navbar-inverse navbar-static-top' %>
+
+<div id="portfolio">
+  <div class="container">
+    <div class="section_header">
+      <h3>Portfolio</h3>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div id="filters_container">
+          <ul id="filters">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li class="separator">/</li>
+            <li><a href="#" data-filter=".art">Art</a></li>
+            <li class="separator">/</li>
+            <li><a href="#" data-filter=".ilustration">Illustration</a></li>
+            <li class="separator">/</li>
+            <li><a href="#" data-filter=".print">Print</a></li>
+            <li class="separator">/</li>
+            <li><a href="#" data-filter=".web">Web</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div id="gallery_container">
+          <div class="photo art web">
+            <img src="/assets/portfolio1.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Art</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo ilustration">
+            <img src="/assets/portfolio2.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Web Design</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo print">
+            <img src="/assets/portfolio3.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Print</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo art web">
+            <img src="/assets/portfolio2.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Web design</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo art ilustration">
+            <img src="/assets/portfolio1.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Ilustration</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo print">
+            <img src="/assets/portfolio3.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Print</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo web">
+            <img src="/assets/portfolio2.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Web Design</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo art ilustration web">
+            <img src="/assets/portfolio3.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Art</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo print">
+            <img src="/assets/portfolio1.png" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Awesome portfolio item</h3>
+              <small>Ilustration</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= content_for :footer_js do %>
+  <%= javascript_include_tag 'jquery.isotope.min.js' %>
+
+  <script type="text/javascript">
+    $(function(){
+      var $container = $('#gallery_container'),
+          $filters = $("#filters a");
+
+      $container.imagesLoaded( function(){
+        $container.isotope({
+          itemSelector : '.photo',
+          masonry: {
+            columnWidth: 102
+          }
+        });
+      });
+
+      // filter items when filter link is clicked
+      $filters.click(function() {
+        $filters.removeClass("active");
+        $(this).addClass("active");
+        var selector = $(this).data('filter');
+        $container.isotope({ filter: selector });
+        return false;
+      });
+    });
+  </script>
+<% end %>
+
+
