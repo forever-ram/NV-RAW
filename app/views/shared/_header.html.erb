@@ -23,7 +23,7 @@
               <li><%= link_to 'Coming Soon', coming_soon_path %></li>
               <li><a href="sign-in.html">Sign in</a></li>
               <li><a href="sign-up.html">Sign up</a></li>
-              <li><a href="backgrounds.html">Backgrounds</a></li>
+              <li><%= link_to 'Backgrounds', backgrounds_path %></li>
             </ul>
           </li>
           <li><%= link_to 'PRICING', pricing_path, class: "#{ params[:controller] == 'welcome' && params[:action] == 'pricing' ? 'active' : '' }" %></li>
