@@ -10,6 +10,7 @@ NVRaw::Application.routes.draw do
   get '/portfolio-item' => "welcome#portfolio_item", as: :portfolio_item
   get '/coming-soon' => "welcome#coming_soon", as: :coming_soon
   get '/backgrounds' => "welcome#backgrounds", as: :backgrounds
+  get '/blogpost' => "welcome#blogpost", as: :blogpost
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
